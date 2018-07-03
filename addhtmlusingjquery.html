@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Test Page</title>
+  <meta name="description" content="Test Page">
+  <meta name="author" content="Test Page">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+  <style>
+  /*vvvvvvvv CSS GOES BELOW THIS COMMENT vvvvvvvv*/
+
+  
+  /*^^^^^^^^ CSS GOES ABOVE THIS COMMENT ^^^^^^^^*/
+  </style>
+
+</head>
+
+<body>
+  <!-- vvvvvvvv HTML GOES BELOW THIS COMMENT vvvvvvvv -->
+ 
+ <button id="hereitis">Make the Page</button>
+  
+  <!-- ^^^^^^^^ HTML GOES ABOVE THIS COMMENT ^^^^^^^^ -->
+  
+  
+  <script>
+    /*global $*/
+    /*vvvvvvvv JAVASCRIPT GOES BELOW THIS COMMENT vvvvvvvv*/
+    
+   $(document).ready( function ()  {
+     
+   $("#hereitis").click(function ()  {
+     
+     
+    
+   
+   
+   console.log("hello");
+   
+   var body = $("body");
+   
+   body.append("<p>Hello I was created when jquery ran!</p>");
+   
+   body.append("<h1 id='top'>Hi this is the second element created using jquery</h1>");
+   
+   body.append("<h2 id='third'>This is the third element</h2>");
+   
+   body.prepend("<img id='image' src = 'milky-way-starry-sky-night-sky-star-956999.jpeg'>");
+   
+   //body.appendto("<h3>This is attached at the end.</h3>");
+   
+   
+   //Edit after you create new element
+   $("#top").css("color", "red");
+   
+   $("#third").css("font-size", "70px");
+   
+   $("#third").css("color", "green");
+   
+   $("#image").css("width", "100px");
+   
+   var myString = "<ul>" +
+   "<li>first item</li>" +
+   "<li>second item</li>" +
+   "</ul>";
+   
+   body.append(myString);
+   
+   var myDiv = "<div id='myDiv'><button id='delete'>Delete this box</button></div>";
+   
+   body.append(myDiv);
+   
+   $("#delete").click( function ()  {
+     
+     $("#myDiv").remove();
+     
+   });
+   
+   $("#myDiv").css("width", "200px");
+   $("#myDiv").css("height", "200px");
+   $("#myDiv").css("background-color", "yellow");
+   
+   $("#myDiv").css("position", "absolute");
+   $("#myDiv").css("top", "650px");
+   $("#myDiv").css("left", "600px");
+   
+   //Advanced --- Object
+   
+   $("#myDiv").css({
+     "border-size": "2px",
+     "border-style": "dashed",
+     "border-color": "red"
+     
+   
+     
+     
+   });
+   
+   });
+   
+   } ) ;
+    
+    /*^^^^^^^^ JAVASCRIPT GOES ABOVE THIS COMMENT ^^^^^^^^*/
+    
+  </script>
+</body>
+</html>

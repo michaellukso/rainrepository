@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Test Page</title>
+  <meta name="description" content="Test Page">
+  <meta name="author" content="Test Page">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+  <style>
+  /*vvvvvvvv CSS GOES BELOW THIS COMMENT vvvvvvvv*/
+  
+  p {
+    
+    color: orange;
+    font-size: 100px;
+    text-align: center;
+    font-family: "Comic Sans MS";
+  }
+  
+  
+  /*^^^^^^^^ CSS GOES ABOVE THIS COMMENT ^^^^^^^^*/
+  </style>
+
+</head>
+
+<body>
+  <!-- vvvvvvvv HTML GOES BELOW THIS COMMENT vvvvvvvv -->
+ 
+ <div id="footer">
+   <p>Copyright 2018</p>
+ </div>
+  
+  <!-- ^^^^^^^^ HTML GOES ABOVE THIS COMMENT ^^^^^^^^ -->
+  
+  <script>
+    /*global $*/
+    /*vvvvvvvv JAVASCRIPT GOES BELOW THIS COMMENT vvvvvvvv*/
+    
+    var rain = prompt('Is it Raining?');
+
+    if (rain == 'yes' || rain == 'Yes' || rain == 'y' || rain == 'Y') { // == means comparing
+
+      // && means and  || means or
+
+      var umbrella = prompt('Did you bring an umbrella?'); // = means assigning or storing
+      if (umbrella == 'yes' || umbrella == 'Yes' umbrella == 'y' ||  umbrella == 'Y') {
+        //console.log('You stay dry!');
+        
+                
+        var text = "<p>You will stay dry!</p>";
+        
+        $("body").html(text);
+        
+      }
+      else if (umbrella == 'no' || umbrella == 'No') {
+        //console.log('You will get sick!')
+
+      $("body").html("<p>You will get sick!</p>");
+
+      }
+
+    }
+    else if (rain == 'no' || rain == "No") {
+
+      var hat = prompt('Did you bring hat?');
+
+      if (hat == 'yes' || hat == "Yes") {
+
+        //console.log('You will not get burned!');
+        
+        $("body").html("<p>You will not get burned!</p>");
+        
+      }
+      else if (hat == 'no' || hat == "No") {
+        // console.log('You might get burned!')
+        
+        $("body").html("<p>You might get burned!</p>");
+      }
+
+    }
+    else {
+      //console.log('Sorry we only know yes or no.');
+      
+       $("body").html("<p>SORRY!  We only know yes or no!</p>");
+      
+    }
+    
+    /*^^^^^^^^ JAVASCRIPT GOES ABOVE THIS COMMENT ^^^^^^^^*/
+    
+  </script>
+</body>
+</html>
